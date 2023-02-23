@@ -105,6 +105,8 @@ module ContentstackUtils
                     renderString = "<code>#{inner_html}</code>"
                 when 'reference'
                     renderString = ""
+                when 'span'
+                    renderString = "<span>#{inner_html}</span>"
                 end
                 renderString
             end

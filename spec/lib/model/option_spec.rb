@@ -305,5 +305,12 @@ RSpec.describe ContentstackUtils::Model::Options do
             expect(result).to eq ""
         end
 
+        it 'Should return span string for span node type' do
+            doc = getJson(BlankDocument)
+
+            result = subject.render_node('span', doc, linkText)
+            expect(result).to eq "<span>#{linkText}</span>"
+        end
+
     end
 end
