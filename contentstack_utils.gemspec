@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.test_files    = s.files.grep(%r{^spec/})
   s.require_paths = ["lib"]
 
-  s.add_dependency 'activesupport', '>= 3.2', '< 6.2'
+  s.add_dependency 'activesupport', '>= 3.2', '< 7.0.4'
   s.add_dependency 'nokogiri', '~> 1.11', '>= 1.11.0'
 
   s.add_development_dependency 'rake', '~> 13.0.3'
