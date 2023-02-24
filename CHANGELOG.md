@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.1.1](https://github.com/contentstack/contentstack-utils-ruby/tree/v1.1.1) (2022-04-21)
+  - Json RTE image, link and frame source url issue resolved
+
 ## [1.1.0](https://github.com/contentstack/contentstack-utils-ruby/tree/v1.1.0) (2021-08-10)
   - GQL Json rte to Html content support added
 
