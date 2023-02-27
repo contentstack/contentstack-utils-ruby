@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.1.2](https://github.com/contentstack/contentstack-utils-ruby/tree/v1.1.2) (2023-02-27)
+  - Dependency gem updated (Activesupport gem)
+
 ## [1.1.1](https://github.com/contentstack/contentstack-utils-ruby/tree/v1.1.1) (2022-04-21)
   - Json RTE image, link and frame source url issue resolved
 
