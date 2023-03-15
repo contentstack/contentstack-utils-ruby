@@ -1,5 +1,6 @@
 require 'simplecov'
 SimpleCov.add_filter ["spec/", "lib/contentstack_utils/support"]
+SimpleCov.start
 require 'nokogiri'
 require 'rspec'
 require 'contentstack_utils'
