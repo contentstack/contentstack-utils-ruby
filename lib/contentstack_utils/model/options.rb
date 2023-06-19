@@ -48,6 +48,8 @@ module ContentstackUtils
                     renderString = "<sub>#{text}</sub>"
                 when 'superscript'
                     renderString = "<sup>#{text}</sup>"
+                when 'br'
+                    renderString = "<br />"
                 end
                 renderString
             end
@@ -85,6 +87,8 @@ module ContentstackUtils
                     renderString = "<li>#{inner_html}</li>"
                 when 'hr'
                     renderString = "<hr />"
+                when 'br'
+                    renderString = "<br />"
                 when 'table'
                     renderString = "<table>#{inner_html}</table>"
                 when 'thead'

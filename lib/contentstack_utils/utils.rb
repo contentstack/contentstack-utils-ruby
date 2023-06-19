@@ -23,6 +23,11 @@ module ContentstackUtils
                 object = findObject(metadata, options.entry)
                 if object!= nil && object.length() > 0 
                     result = options.render_option(object[0], metadata)
+                else
+                    content.each do |node|
+                        inner_html = json_doc_to_html(node, options, reference)
+                        result =  options.render_node(node["type"], node, inner_html)
+                    end
                 end
             end
             result
