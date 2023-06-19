@@ -1,5 +1,7 @@
 # Changelog
 
+## [1.1.4](https://github.com/contentstack/contentstack-utils-ruby/tree/v1.1.4) (2023-06-20)
+  - Support for nested assets in the the image and br tag
 ## [1.1.3](https://github.com/contentstack/contentstack-utils-ruby/tree/v1.1.3) (2023-03-16)
   - Dependency gem max version issue resolved. (Activesupport gem)
 
