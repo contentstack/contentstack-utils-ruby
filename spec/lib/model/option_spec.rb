@@ -98,6 +98,8 @@ RSpec.describe ContentstackUtils::Model::Options do
             to eq "<sub>#{linkText}</sub>"
             expect(subject.render_mark('superscript', linkText)).
             to eq "<sup>#{linkText}</sup>"
+            expect(subject.render_mark('br', linkText)).
+            to eq "<br />"
             expect(subject.render_mark('', linkText)).
             to eq linkText
         end
