@@ -43,6 +43,7 @@ EntryReferenceBlockJson = '{ "uid":"06e34a7  5e4 e549d ", "_version":1, "attrs":
 EntryReferenceLinkJson = '{ "uid":"06e34a7  5e4 e549d", "_version":1, "attrs":{ }, "children":[{"uid":"7626ea98e0e95d602210","type":"reference","attrs":{"target":"_self","href":"/copy-of-entry-final-02","display-type":"link","entry-uid":"entry_uid_2","content-type-uid":"embeddedrte","locale":"en-us","type":"entry","class-name":"embedded-entry"},"children":[{"text":"/copy-of-entry-final-02"}]}],"type":"doc"}'
 EntryReferenceInlineJson = '{ "uid":"06e34a7  5e4 e549d", "_version":1, "attrs":{ }, "children":[{"uid":"506 4878f3f46 s21f0cbc aff","type":"reference","attrs":{"display-type":"inline","entry-uid":"entry_uid_3","content-type-uid":"embeddedrte","locale":"en-us","type":"entry","class-name":"embedded-entry"},"children":[{"text":""}]}],"type":"doc"}'
 HRJson = '{ "uid":"06e34a7  5e4 e549d", "_version":1, "attrs":{ }, "children":[{"uid":"f5a7b57 40a8a5c3 576828276b","type":"hr","children":[{"text":""}],"attrs":{ }}],"type":"doc"}'
+BRJson = '{ "uid":"06e34a7  5e4 e549d", "_version":1, "attrs":{ }, "children":[{"uid":"f5a7b57 40a8a5c3 576828276b","type":"br","children":[{"text":""}],"attrs":{ }}],"type":"doc"}'
 H1NonChildJson = '{ "uid":"06e34a7a449d7fc2acd","_version":13,"attrs":{ },"children":[{ "type":"h1","attrs":{ },"uid":"c2dfed70 4d7030c65e2e1"}],"type":"doc"}'
 
 JSON_EMBEDDED_ITEMS_ENTRY= {
