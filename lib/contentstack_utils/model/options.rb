@@ -48,7 +48,7 @@ module ContentstackUtils
                     renderString = "<sub>#{text}</sub>"
                 when 'superscript'
                     renderString = "<sup>#{text}</sup>"
-                when 'br'
+                when 'break'
                     renderString = "<br />"
                 end
                 renderString
