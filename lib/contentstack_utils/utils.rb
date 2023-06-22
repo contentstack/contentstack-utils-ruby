@@ -58,7 +58,7 @@ module ContentstackUtils
     private_class_method def self.node_to_html(node, options, callback)
         html_result = ""
         if node["type"] == nil && node["text"] 
-            html_result = text_to_htms(node, options)            
+            html_result = text_to_html(node, options)            
         elsif node["type"]
             if node["type"] == "reference"
                 metadata = Model::Metadata.new(node)
@@ -71,7 +71,7 @@ module ContentstackUtils
         html_result
     end
 
-    private_class_method def self.text_to_htms(node, options)
+    private_class_method def self.text_to_html(node, options)
         text = node["text"]
         if node["superscript"]
             text = options.render_mark("superscript", text)
@@ -93,6 +93,9 @@ module ContentstackUtils
         end
         if node["bold"]
             text = options.render_mark("bold", text)
+        end
+        if node["break"]
+            text = options.render_mark("break", text)
         end
         text
     end
