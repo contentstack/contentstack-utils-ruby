@@ -204,13 +204,6 @@ RSpec.describe ContentstackUtils do
             
             expect(result).to eq ['<hr />']
         end
-        it 'Should return break line string for break line doc' do
-            doc = getJson(BRJson)
-            
-            result = ContentstackUtils.json_to_html([doc], ContentstackUtils::Model::Options.new())
-            
-            expect(result).to eq ['<br />']
-        end
     end
 
     describe '#JsonToHtml' do

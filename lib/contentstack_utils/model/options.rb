@@ -87,8 +87,6 @@ module ContentstackUtils
                     renderString = "<li>#{inner_html}</li>"
                 when 'hr'
                     renderString = "<hr />"
-                when 'br'
-                    renderString = "<br />"
                 when 'table'
                     renderString = "<table>#{inner_html}</table>"
                 when 'thead'
