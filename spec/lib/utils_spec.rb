@@ -377,6 +377,14 @@ RSpec.describe ContentstackUtils do
             expect(result).to eq AssetReferenceHtml
         end
 
+        it 'Should return asset embedded items for assest-link' do 
+            doc = getJson(AssetReferenceJson)
+
+            result = ContentstackUtils.json_to_html(doc, ContentstackUtils::Model::Options.new(JSON_EMBEDDED_ITEMS_ENTRY))
+            
+            expect(result).to eq "<img src='/v3/dummy.pdf' alt='dummy.pdf' />"
+        end
+
         it 'Should return entry block embedded items' do 
             doc = getJson(EntryReferenceBlockJson)
 
