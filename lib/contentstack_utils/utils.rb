@@ -23,6 +23,11 @@ module ContentstackUtils
                 object = findObject(metadata, options.entry)
                 if object!= nil && object.length() > 0 
                     result = options.render_option(object[0], metadata)
+                else
+                    content.each do |node|
+                        inner_html = json_doc_to_html(node, options, reference)
+                        result =  options.render_node(node["type"], node, inner_html)
+                    end
                 end
             end
             result
@@ -53,7 +58,7 @@ module ContentstackUtils
     private_class_method def self.node_to_html(node, options, callback)
         html_result = ""
         if node["type"] == nil && node["text"] 
-            html_result = text_to_htms(node, options)            
+            html_result = text_to_html(node, options)            
         elsif node["type"]
             if node["type"] == "reference"
                 metadata = Model::Metadata.new(node)
@@ -66,7 +71,7 @@ module ContentstackUtils
         html_result
     end
 
-    private_class_method def self.text_to_htms(node, options)
+    private_class_method def self.text_to_html(node, options)
         text = node["text"]
         if node["superscript"]
             text = options.render_mark("superscript", text)
@@ -88,6 +93,9 @@ module ContentstackUtils
         end
         if node["bold"]
             text = options.render_mark("bold", text)
+        end
+        if node["break"]
+            text = options.render_mark("break", text)
         end
         text
     end

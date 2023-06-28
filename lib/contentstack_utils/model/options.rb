@@ -48,6 +48,8 @@ module ContentstackUtils
                     renderString = "<sub>#{text}</sub>"
                 when 'superscript'
                     renderString = "<sup>#{text}</sup>"
+                when 'break'
+                    renderString = "<br />"
                 end
                 renderString
             end
@@ -104,7 +106,12 @@ module ContentstackUtils
                 when 'code'
                     renderString = "<code>#{inner_html}</code>"
                 when 'reference'
-                    renderString = ""
+                    if (node["attrs"]['type'] === 'asset') 
+                        renderString = "<img src=#{node["attrs"]['asset-link']} alt=#{node["attrs"]['asset-name']} />"
+                    else 
+                        renderString = "" 
+                    end
+
                 when 'span'
                     renderString = "<span>#{inner_html}</span>"
                 end
