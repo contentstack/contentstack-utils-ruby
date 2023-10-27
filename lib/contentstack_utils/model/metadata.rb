@@ -1,7 +1,7 @@
 
 module ContentstackUtils
     module Model
-        class Metadata 
+        class Metadata
             def initialize( element )
                 if element.instance_of? Nokogiri::XML::Element
                     @itemType = element.attribute('type') ? element.attribute('type').value : nil
@@ -16,44 +16,45 @@ module ContentstackUtils
                     @styleType = element["attrs"]['display-type']
                     @itemUid ||= element["attrs"]['entry-uid'] || element["attrs"]['asset-uid']
                     @contentTypeUid = element["attrs"]['content-type-uid']
-                    if element["children"] && element["children"].length() > 0 
+                    if element["children"] && element["children"].length() > 0
                         child = element["children"]
+                        @text = ""
                         for item in child do
-                            if item["type"] == nil && item["text"] 
-                                @text = item["text"] 
+                            if item["type"] == nil && item["text"]
+                                @text += item["text"]
                             end
                         end
-                    end   
+                    end
                     @element = element
                     @attributes = element["attrs"]
                 end
             end
 
-            def item_type 
+            def item_type
                 @itemType ? @itemType : nil
             end
 
-            def style_type 
+            def style_type
                 @styleType ? @styleType : nil
             end
 
-            def item_uid 
+            def item_uid
                 @itemUid ? @itemUid : nil
             end
 
-            def content_type_uid 
+            def content_type_uid
                 @contentTypeUid ? @contentTypeUid : nil
             end
 
-            def text 
+            def text
                 @text
             end
 
-            def element 
+            def element
                 @element
             end
-            
-            def attributes 
+
+            def attributes
                 @attributes
             end
 
@@ -62,7 +63,7 @@ module ContentstackUtils
                     @attributes.attribute(string) ? @attributes.attribute(string).value : nil
                 else
                     @attributes[string]
-                end 
+                end
             end
         end
     end
