@@ -522,6 +522,26 @@ RSpec.describe ContentstackUtils do
             expect(arrayResult).to eq [UnorderListHtml]
         end
 
+        it 'Should return Order List string for OrderListJson with Fragment doc' do
+            entry = getGQLJSONRTE(OrderListFragmentJson)
+
+            result = ContentstackUtils::GQL.json_to_html(entry['single_rte'], ContentstackUtils::Model::Options.new())
+            arrayResult = ContentstackUtils::GQL.json_to_html(entry['multiple_rte'], ContentstackUtils::Model::Options.new())
+
+            expect(result).to eq OrderListFragmentHtml
+            expect(arrayResult).to eq [OrderListFragmentHtml]
+        end
+
+        it 'Should return Unorder List string for UnorderListJson with Fragment doc' do
+            entry = getGQLJSONRTE(UnorderListFragmentJson)
+
+            result = ContentstackUtils::GQL.json_to_html(entry['single_rte'], ContentstackUtils::Model::Options.new())
+            arrayResult = ContentstackUtils::GQL.json_to_html(entry['multiple_rte'], ContentstackUtils::Model::Options.new())
+
+            expect(result).to eq UnorderListFragmentHtml
+            expect(arrayResult).to eq [UnorderListFragmentHtml]
+        end
+
         it 'Should return image string for ImgJson doc' do
             entry = getGQLJSONRTE(ImgJson)
 
