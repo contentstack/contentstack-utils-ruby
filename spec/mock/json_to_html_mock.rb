@@ -9,6 +9,8 @@ H5Html = "<h5>Mauris venenatis dui id massa sollicitudin, non bibendum nunc dict
 H6Html = "<h6>Nunc porta diam vitae purus semper, ut consequat lorem vehicula.</h6>"
 OrderListHtml = "<ol><li>Morbi in quam molestie, fermentum diam vitae, bibendum ipsum.</li><li>Pellentesque mattis lacus in quam aliquam congue</li><li>Integer feugiat leo dignissim, lobortis enim vitae, mollis lectus.</li><li>Sed in ante lacinia, molestie metus eu, fringilla sapien.</li></ol>"
 UnorderListHtml = "<ul><li>Sed quis metus sed mi hendrerit mollis vel et odio.</li><li>Integer vitae sem dignissim, elementum libero vel, fringilla massa.</li><li>Integer imperdiet arcu sit amet tortor faucibus aliquet.</li><li>Aenean scelerisque velit vitae dui vehicula, at congue massa sagittis.</li></ul>"
+OrderListFragmentHtml = "<ol><li><fragment>List Item 1</fragment><ol><li>List Item 1.1</li><li>List Item 1.2</li><li>List Item 1.3</li></ol></li></ol>"
+UnorderListFragmentHtml = "<ul><li><fragment>List Item 1</fragment><ul><li>List Item 1.1</li><li>List Item 1.2</li><li>List Item 1.3</li></ul></li></ul>"
 ImgHtml = "<img src='https://images.contentstack.com/v3/Donald.jog.png' />"
 TableHtml = "<table><thead><tr><th><p>Header 1</p></th><th><p>Header 2</p></th></tr></thead><tbody><tr><td><p>Body row 1 data 1</p></td><td><p>Body row 1 data 2</p></td></tr><tr><td><p>Body row 2 data 1</p></td><td><p>Body row 2 data 2</p></td></tr></tbody></table>"
 BlockquoteHtml = "<blockquote>Praesent eu ex sed nibh venenatis pretium.</blockquote>"
@@ -145,3 +147,99 @@ JSON_EMBEDDED_ITEMS_ENTRY= {
   }
 
   EmbedEdges = '{"edges":[{"node":{"system":{"content_type_uid":"sys_assets","uid":"entry_uid_5"},"created_at":"2020-08-19T09:13:05.864Z","updated_at":"2020-09-10T09:35:28.393Z","created_by":"created_at_date","updated_by":"created_at_date","content_type":"image/png","file_size":"36743","filename":"svg-logo-text.png","url":"/v3/svg-logo-text.png","_version":7,"title":"svg-logo-text.png","description":""}},{"node":{"system":{"content_type_uid":"sys_assets","uid":"asset_uid_1"},"created_at":"2020-08-19T09:13:32.785Z","updated_at":"2020-08-19T09:13:32.785Z","created_by":"created_at_date","updated_by":"created_at_date","content_type":"application/pdf","file_size":"13264","filename":"title","url":"/v3/dummy.pdf","_version":1,"title":"dummy.pdf"}},{"node":{"title":"Update this title","url":"","locale":"en-us","system":{"uid":"entry_uid_1","content_type_uid":"content_block"},"_version":5,"_in_progress":false,"multi_line":"","rich_text_editor":""}},{"node":{"title":"updated title","rich_text_editor":[""],"locale":"en-us","system":{"uid":"entry_uid_3","content_type_uid":"embeddedrte"},"_in_progress":false}},{"node":{"title":"Entry with embedded entry","rich_text_editor":[""],"locale":"en-us","system":{"uid":"entry_uid_2","content_type_uid":"embeddedrte"},"_in_progress":false}},{"node":{"system":{"uid":"entry_uid_6","content_type_uid":"sys_assets"},"content_type":"image/png","file_size":"36743","filename":"svg-logo-text.png","url":"/v3/svg-logo-text.png","title":"svg-logo-text.png","description":""}},{"node":{"title":"Update this title","url":"","locale":"en-us","system":{"uid":"entry_uid_1","content_type_uid":"content_block"},"_version":5,"_in_progress":false,"multi_line":"","rich_text_editor":""}},{"node":{"title":"updated title","rich_text_editor":[""],"locale":"en-us","system":{"uid":"entry_uid_3","content_type_uid":"embeddedrte"},"_in_progress":false}},{"node":{"title":"Entry with embedded entry","rich_text_editor":[""],"locale":"en-us","system":{"uid":"entry_uid_2","content_type_uid":"embeddedrte"},"_in_progress":false}}]}'
+  
+  OrderListFragmentJson = {
+    "type": "ol",
+    "children": [
+      {
+        "type": "li",
+        "children": [
+          {
+            "type": "fragment",
+            "children": [
+              {
+                "text": "List Item 1"
+              }
+            ]
+          },
+          {
+            "type": "ol",
+            "children": [
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "text": "List Item 1.1"
+                  }
+                ]
+              },
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "text": "List Item 1.2"
+                  }
+                ]
+              },
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "text": "List Item 1.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+
+  UnorderListFragmentJson = {
+    "type": "ul",
+    "children": [
+      {
+        "type": "li",
+        "children": [
+          {
+            "type": "fragment",
+            "children": [
+              {
+                "text": "List Item 1"
+              }
+            ]
+          },
+          {
+            "type": "ul",
+            "children": [
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "text": "List Item 1.1"
+                  }
+                ]
+              },
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "text": "List Item 1.2"
+                  }
+                ]
+              },
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "text": "List Item 1.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
