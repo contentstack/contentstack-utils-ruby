@@ -1,4 +1,7 @@
 # Changelog
+
+## [1.2.2](https://github.com/contentstack/contentstack-utils-ruby/tree/v1.2.2) (2026-01-05)
+  - Fixed snyk security issues
 ## [1.2.1](https://github.com/contentstack/contentstack-utils-ruby/tree/v1.2.1) (2024-02-27)
   - Support for JSON RTE with fragment in nested list
 ## [1.2.0](https://github.com/contentstack/contentstack-utils-ruby/tree/v1.2.0) (2023-06-20)
