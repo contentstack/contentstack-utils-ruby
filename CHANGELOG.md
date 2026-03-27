@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.2.3](https://github.com/contentstack/contentstack-utils-ruby/tree/v1.2.3) (2026-03-30)
+  - Fixed GQL JSON test helper parsing for hash-based fixtures by serializing Ruby hashes to JSON.
+  - Normalized non-doc fragment list fixtures into doc-root shape to keep nested list fragment specs stable.
+
 ## [1.2.2](https://github.com/contentstack/contentstack-utils-ruby/tree/v1.2.2) (2026-01-05)
   - Fixed snyk security issues
 ## [1.2.1](https://github.com/contentstack/contentstack-utils-ruby/tree/v1.2.1) (2024-02-27)
