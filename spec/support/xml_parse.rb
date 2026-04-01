@@ -17,14 +17,22 @@ def getJson(text)
 end
 
 def getGQLJSONRTE(node, item = '""')
+    normalized_node = node
+    if node.is_a?(Hash) && node["type"] != "doc" && node[:type] != "doc"
+        normalized_node = { "type" => "doc", "children" => [node] }
+    end
+
+    node_payload = normalized_node.is_a?(String) ? normalized_node : JSON.generate(normalized_node)
+    item_payload = item.is_a?(String) ? item : JSON.generate(item)
+
     entry = "{
         \"single_rte\": {
-            \"json\": #{node},
-            \"embedded_itemsConnection\": #{item}
+            \"json\": #{node_payload},
+            \"embedded_itemsConnection\": #{item_payload}
         },
         \"multiple_rte\": {
-            \"json\": [#{node}],
-            \"embedded_itemsConnection\": #{item}
+            \"json\": [#{node_payload}],
+            \"embedded_itemsConnection\": #{item_payload}
         }
     }"
     getJson(entry)
