@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.authors = [%q{Contentstack}]
   s.email = ["support@contentstack.com"]
 
-  s.required_ruby_version = '>= 3.0'
+  s.required_ruby_version = '>= 3.1'
 
   s.license = "MIT"
   s.homepage = "https://github.com/contentstack/contentstack-utils-ruby"
@@ -21,8 +21,8 @@ Gem::Specification.new do |s|
   s.test_files    = s.files.grep(%r{^spec/})
   s.require_paths = ["lib"]
 
-  s.add_dependency 'activesupport', '>= 8.0'
-  s.add_dependency 'nokogiri', '>= 1.19'
+  s.add_dependency 'activesupport', '>= 7.0', '< 8'
+  s.add_dependency 'nokogiri', '>= 1.13', '< 1.19'
 
   s.add_development_dependency 'rake', '~> 13.0'
   s.add_development_dependency 'rspec', '~> 3.13'
