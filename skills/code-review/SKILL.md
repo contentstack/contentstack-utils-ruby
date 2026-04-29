@@ -33,7 +33,7 @@ description: Use when reviewing or preparing a PR for this gem—behavior, tests
 
 ### Process
 
-- Respect **CODEOWNERS** and branch policy (**`master`** vs **`staging`**) described in [dev-workflow](../dev-workflow/SKILL.md)
+- Respect **CODEOWNERS** and branch policy (**feature/fix -> `development`**, release PRs **`development` -> `master`**) described in [dev-workflow](../dev-workflow/SKILL.md)
 
 ## References
 

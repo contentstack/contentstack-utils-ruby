@@ -35,7 +35,7 @@ description: Use when changing the gemspec, Bundler setup, Ruby/runtime constrai
 ### Build and publish
 
 - Local artifact: `gem build contentstack_utils.gemspec`
-- Publishing is triggered by GitHub **release** per `release-gem.yml`
+- Publishing runs when a GitHub **Release** is created (`release: types: [created]`) for tag **`v*`** (draft releases skipped); see `release-gem.yml`.
 
 ## References
 
