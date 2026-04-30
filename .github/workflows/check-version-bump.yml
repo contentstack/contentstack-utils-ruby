@@ -2,7 +2,7 @@ name: Check Version Bump
 
 on:
   pull_request:
-    branches: [fix/DX-6188-test, fix/DX-6188-test]
+    branches: [development]
 
 jobs:
   check-version-bump:
