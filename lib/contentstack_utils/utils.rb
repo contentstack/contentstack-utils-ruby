@@ -3,6 +3,14 @@ require_relative './model/metadata.rb'
 require_relative './support/helper.rb'
 require 'nokogiri'
 
+/*
+render_content is a method that renders the content of an entry.
+It takes two parameters:
+- content: the content of the entry
+- options: the options for the rendering
+
+It returns a string of the rendered content.
+*/
 module ContentstackUtils
     def self.render_content(content, options)
         if (content.instance_of? Array)
