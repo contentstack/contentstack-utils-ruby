@@ -9,3 +9,5 @@ coverage
 .bundle/
 **/rspec_results.html
 .dccache
+vendor/
+lib/contentstack_utils/assets/regions.json
