@@ -1,6 +1,7 @@
 require_relative './model/options.rb'
 require_relative './model/metadata.rb'
 require_relative './support/helper.rb'
+require_relative './endpoint.rb'
 require 'nokogiri'
 
 module ContentstackUtils
@@ -134,6 +135,10 @@ module ContentstackUtils
             end
         end
         return nil
+    end
+
+    def self.get_contentstack_endpoint(region: 'us', service: '', omit_https: false)
+        Endpoint.get_contentstack_endpoint(region: region, service: service, omit_https: omit_https)
     end
 
     module GQL
