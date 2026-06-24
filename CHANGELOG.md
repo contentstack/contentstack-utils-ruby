@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.2.5](https://github.com/contentstack/contentstack-utils-ruby/tree/v1.2.5) (2026-06-24)
+  - Fixed security vulnerabilities: upgraded yard to 0.9.44 (Directory Traversal) and concurrent-ruby to 1.3.7 (Infinite loop, Improper Locking, Wrap-around Error).
+
 ## [1.2.4](https://github.com/contentstack/contentstack-utils-ruby/tree/v1.2.4) (2026-04-15)
   - Fixed Security issues.
 

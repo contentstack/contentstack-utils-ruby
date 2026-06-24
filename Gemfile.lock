@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    contentstack_utils (1.2.4)
+    contentstack_utils (1.2.5)
       activesupport (>= 7.0, < 8)
       nokogiri (~> 1.19, >= 1.19.2)
 
@@ -105,4 +105,4 @@ DEPENDENCIES
   yard (>= 0.9.44)
 
 BUNDLED WITH
-   2.3.26
+   2.5.22
