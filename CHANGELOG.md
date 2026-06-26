@@ -1,6 +1,10 @@
 # Changelog
 
-## [1.2.5](https://github.com/contentstack/contentstack-utils-ruby/tree/v1.2.5) (2026-06-24)
+## [1.3.0](https://github.com/contentstack/contentstack-utils-ruby/tree/v1.3.0) (2026-06-24)
+  - Added `ContentstackUtils::Endpoint.get_contentstack_endpoint` for dynamic endpoint resolution based on region and service.
+  - Added `ContentstackUtils.get_contentstack_endpoint` as a backward-compatible proxy.
+  - Added `ContentstackUtils::Endpoint.refresh_regions` for manual region metadata refresh.
+  - Added runtime fallback to automatically download `regions.json` from the Contentstack Regions Registry when not present locally.
   - Fixed security vulnerabilities: upgraded yard to 0.9.44 (Directory Traversal) and concurrent-ruby to 1.3.7 (Infinite loop, Improper Locking, Wrap-around Error).
 
 ## [1.2.4](https://github.com/contentstack/contentstack-utils-ruby/tree/v1.2.4) (2026-04-15)

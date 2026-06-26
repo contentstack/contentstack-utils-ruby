@@ -32,12 +32,12 @@ description: Use when setting up the dev environment, running build/test/docs, o
 
 ### Branches and PRs
 
-- `.github/workflows/check-branch.yml` blocks merging into **`master`** unless the head branch is **`staging`** (organizational policy). Prefer PRs that follow team conventions for `master` / `staging`.
+- Feature/fix PRs should target **`development`**. Release PRs are raised directly from **`development`** to **`master`**.
 - Use `CODEOWNERS` for required reviewers when applicable
 
 ### CI and automation (no RSpec workflow today)
 
-- **Release:** `.github/workflows/release-gem.yml` — on GitHub **release created**, builds and pushes to RubyGems (note: workflow pins Ruby 2.7 for publish; align with gemspec minimum when changing)
+- **Release:** `.github/workflows/release-gem.yml` — on GitHub **Release** created (`release: types: [created]`) for tag **`v*`** (draft releases skipped), checks out the tag, then builds and pushes to RubyGems (note: workflow pins Ruby 2.7 for publish; align with gemspec minimum when changing)
 - **Security / compliance:** CodeQL, policy scan, SCA scan — see `.github/workflows/`
 - **Issues:** Jira integration workflow in `.github/workflows/issues-jira.yml`
 
